@@ -59,9 +59,9 @@ interface UserDao {
 abstract class AppDatabase() : RoomDatabase() {
     abstract fun userDao(): UserDao
 }
+```
 这里注意下查询时候用 Flow 包一下，Flow 可以转换为 LiveData，当然对于 JetpackCompose 来说，可以直接转换为它可以理解的形式  
 简单来说，就是变量订阅，当数据更改时，自动更新界面
-```
 ### 使用
 ``` Kotlin
 val db = Room.databaseBuilder(applicationContext, AppDatabase::class.java, "database").allowMainThreadQueries().build()
