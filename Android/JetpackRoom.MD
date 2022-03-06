@@ -29,7 +29,7 @@ javaCompileOptions {
 ### 建立数据库
 AppDatabase.kt  
 Sample 代码如下
-``` Kotlin
+``` kotlin
 package com.sanenchen.jetpackroom
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
@@ -63,7 +63,7 @@ abstract class AppDatabase() : RoomDatabase() {
 这里注意下查询时候用 Flow 包一下，Flow 可以转换为 LiveData，当然对于 JetpackCompose 来说，可以直接转换为它可以理解的形式  
 简单来说，就是变量订阅，当数据更改时，自动更新界面
 ### 使用
-``` Kotlin
+``` kotlin
 val db = Room.databaseBuilder(applicationContext, AppDatabase::class.java, "database").allowMainThreadQueries().build()
 // 简单说下查询吧，什么增添，删除就直接调用方法就好
 val result = db.userDao().selectAll().collectAsState(listOf()).value

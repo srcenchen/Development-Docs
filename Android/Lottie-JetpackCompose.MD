@@ -2,18 +2,18 @@
 ## 简介
 一个动画库 For Jetpack Compose，并且跨平台
 ## 引入依赖 
-``` Gradle
+``` gradle
 implementation 'com.airbnb.android:lottie-compose:5.0.1'
 ```
 ### 基本使用
-``` Kotlin
+``` kotlin
 val lottieComposition by rememberLottieComposition(spec = LottieCompositionSpec.Url("https://assets9.lottiefiles.com/packages/lf20_rbtawnwz.json"))
 val lottieAnimationState by animateLottieCompositionAsState(composition = lottieComposition, iterations = LottieConstants.IterateForever)
 LottieAnimation(composition = lottieComposition, progress = lottieAnimationState)
 ```
 这边是最基本的使用  
 下面是一些进阶东西的配置
-``` Kotlin
+``` kotlin
 // 对于加载方式，Lottie提供了其他方式  在 第一行中的 spec 使用
 sealed interface LottieCompositionSpec {
     // 加载 res/raw 目录下的静态资源
@@ -33,7 +33,7 @@ sealed interface LottieCompositionSpec {
 }
 ```
 对于 lottieCompositionState 可以这么配置
-``` Kotlin
+``` kotlin
 val lottieAnimationState by animateLottieCompositionAsState (
     composition = lottieComposition, // 动画资源句柄 必填
     iterations = LottieConstants.IterateForever, // 播放次数 此处为永久循环
