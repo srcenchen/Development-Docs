@@ -3,9 +3,9 @@
 Room 持久性库在 SQLite 的基础上提供了一个抽象层，让用户能够在充分利用 SQLite 的强大功能的同时，获享更强健的数据库访问机制。 -- Android Developers  
 ## 引入依赖 基本配置
 ``` Gradle
-implementation "androidx.room:room-runtime:2.4.1"
-kapt "androidx.room:room-compiler:2.4.1"
-implementation "androidx.room:room-ktx:2.4.1"
+implementation "androidx.room:room-runtime:2.4.2"
+kapt "androidx.room:room-compiler:2.4.2"
+implementation "androidx.room:room-ktx:2.4.2"
 ```
 之后导入一个 kotlin-kapt 插件
 ``` Gradle
