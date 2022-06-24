@@ -3,7 +3,7 @@
 快速改变状态栏的颜色，以及深色以及浅色模式
 ### 引入依赖
 ``` Gradle
-implementation "com.google.accompanist:accompanist-systemuicontroller:0.24.3-alpha"
+implementation "com.google.accompanist:accompanist-systemuicontroller:0.24.12-rc"
 ```
 ### 简单使用
 ``` kotlin
